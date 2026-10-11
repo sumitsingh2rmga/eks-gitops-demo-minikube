@@ -1,0 +1,24 @@
+# Optional: used in scenario 7.7 of the minikube guide.
+# Apply manually:  kubectl -n demo apply -f k8s/optional/hpa.yaml
+# Needs metrics-server (minikube addons enable metrics-server) and CPU requests on the pod.
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: myapp
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: myapp
+  minReplicas: 1
+  maxReplicas: 4
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 60
