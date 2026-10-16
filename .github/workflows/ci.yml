@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 env:
-  IMAGE: sumitsinghrmga/eks-gitops-demo
+  IMAGE: sumitsinghrmga/eks-gitops-demo-minikube1
 
 jobs:
   build-and-test:

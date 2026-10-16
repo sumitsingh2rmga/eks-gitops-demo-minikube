@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR_GITHUB_USER/eks-gitops-demo.git   # <-- change
+    repoURL: https://github.com/sumitsingh2rmga/eks-gitops-demo-minikube.git   # <-- change
     targetRevision: main
     path: k8s/overlays/dev
   destination:
