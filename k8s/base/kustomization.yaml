@@ -7,5 +7,5 @@ resources:
 # Add this block to bind the image to your local v1 build
 images:
   - name: myapp
-    newName: local/myapp
+    newName: library/myapp
     newTag: v1
