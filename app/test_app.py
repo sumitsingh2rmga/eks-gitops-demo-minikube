@@ -11,4 +11,3 @@ def test_home_has_version():
     r = app.test_client().get("/")
     assert r.status_code == 200
     assert "version" in r.json
- 
