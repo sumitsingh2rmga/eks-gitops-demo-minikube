@@ -5,5 +5,5 @@ resources:
   - ../../base
 images:
   - name: myapp
-    newName: DOCKERHUB_USER/myapp   # CI rewrites this line
-    newTag: "latest"                # CI rewrites this line with the commit SHA
+    newName: sumitsinghrmga/eks-gitops-demo-minikube1
+    newTag: "53649b0af1264bd12ad320c1152f7cd6af95ef50"
