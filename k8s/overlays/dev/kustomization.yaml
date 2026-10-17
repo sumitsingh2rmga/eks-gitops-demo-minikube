@@ -6,4 +6,4 @@ resources:
 images:
   - name: myapp
     newName: sumitsinghrmga/eks-gitops-demo-minikube1
-    newTag: "85d595c139e0bd6a0f5f34f57ece585ba9e5cc9e"
+    newTag: "5ae5a26195f4eb69f368b7ae3ae3fafe49c3e131"
