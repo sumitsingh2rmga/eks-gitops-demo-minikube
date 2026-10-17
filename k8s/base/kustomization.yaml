@@ -8,4 +8,4 @@ resources:
 images:
   - name: myapp
     newName: library/myapp
-    newTag: v2
+    newTag: v1
