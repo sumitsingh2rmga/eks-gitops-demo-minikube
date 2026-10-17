@@ -6,8 +6,7 @@ on:
     paths-ignore: ["k8s/**", "docs/**", "README.md"]   # the bot's manifest commit must not retrigger CI
   pull_request:
     paths-ignore: ["k8s/**", "docs/**", "README.md"]
-  workflow_dispatch: # Enables the manual "Run workflow" button
-    branches: [ "main" ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -35,7 +34,7 @@ jobs:
 
   build-and-push-docker:
     needs: build-and-test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: write          # lets the last step commit the new image tag
